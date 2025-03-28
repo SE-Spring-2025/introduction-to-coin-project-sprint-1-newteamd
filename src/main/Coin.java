@@ -19,7 +19,7 @@ public abstract class Coin {
 	this((Calendar.getInstance()).get(Calendar.YEAR));
     }
 	public Coin(int year){
-		manufactureYear = year
+		manufactureYear = year;
 		frontMotto = "IN GOD WE TRUST";
 		backMotto = "E PLURIBUS UNUM";
 		frontLabel = "LIBERTY";

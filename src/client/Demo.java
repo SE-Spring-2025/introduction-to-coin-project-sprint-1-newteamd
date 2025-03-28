@@ -21,24 +21,18 @@ public class Demo {
     private static void fixedDemo() {
 	System.out.println();
 	System.out.println();
-	System.out.println("Making a Coin()");
-	System.out.println("Result:" + new Coin());
 	System.out.println("Making a Coin(0.01)");
-	System.out.println("Result:" + new Coin(0.01));
+	System.out.println("Result:" + new Penny(1));
 	System.out.println("Making a Coin(0.05)");
-	System.out.println("Result:" + new Coin(0.05));
+	System.out.println("Result:" + new Dime(1));
 	System.out.println("Making a Coin(0.10)");
-	System.out.println("Result:" + new Coin(0.10));
+	System.out.println("Result:" + new Nickel(q));
 	System.out.println("Making a Coin(0.25)");
-	System.out.println("Result:" + new Coin(0.25));
+	System.out.println("Result:" + new Quarter(1));
 	System.out.println("Making a Coin(0.50)");
-	System.out.println("Result:" + new Coin(0.50));
+	System.out.println("Result:" + new HalfDollar(1));
 	System.out.println("Making a Coin(1.00)");
-	System.out.println("Result:" + new Coin(1.00));
-	System.out.println("Making a Coin(1.00, 1991)");
-	System.out.println("Result:" + new Coin(1.00,1991));
-	System.out.println("Making a Coin(99.99)");
-	System.out.println("Result:" + new Coin(99.99));
+	System.out.println("Result:" + new Dollar(1));
     }
     private static void printMenu() {
 	System.out.println();
@@ -78,30 +72,29 @@ public class Demo {
 	    switch (response.charAt(0)) {
 	        case 'G':
 		    System.out.println("Gonna make a dollar coin...");
-		    c = new Coin(1.00);
+		    c = new Dollar(1);
 		    break;
 	        case 'H':
 		    System.out.println("Gonna make a half dollar coin...");
-		    c = new Coin(0.50);
+		    c = new HalfDollar(1);
 		    break;
 	        case 'Q':
 		    System.out.println("Gonna make a quarter coin...");
-		    c = new Coin(0.25);
+		    c = new Quarter(1);
 		    break;
 	        case 'D':
 		    System.out.println("Gonna make a dime coin...");
-		    c = new Coin(0.10);
+		    c = new Dime(1);
 		    break;
 	        case 'N':
-		    c = new Coin(0.05);
 		    System.out.println("Gonna make a nickel coin...");
+			c = new Nickel(1);
 		    break;
 	        case 'P':
 		    System.out.println("Gonna make a penny coin...");
-		    c = new Coin(0.01);
+		    c = new Penny(1);
 		    break;
 	        case 'X':
-		    c = new Coin();
 		    return;
 	        default:
 		    System.out.println("Invalid entry, try again.");
