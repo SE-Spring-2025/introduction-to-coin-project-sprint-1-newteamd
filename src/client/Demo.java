@@ -26,7 +26,7 @@ public class Demo {
 	System.out.println("Making a Coin(0.05)");
 	System.out.println("Result:" + new Dime(1));
 	System.out.println("Making a Coin(0.10)");
-	System.out.println("Result:" + new Nickel(q));
+	System.out.println("Result:" + new Nickel(1));
 	System.out.println("Making a Coin(0.25)");
 	System.out.println("Result:" + new Quarter(1));
 	System.out.println("Making a Coin(0.50)");
