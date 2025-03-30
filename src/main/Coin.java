@@ -2,28 +2,28 @@ import java.util.Calendar;
 import java.text.DecimalFormat;
 
 public abstract class Coin {
-    private String familiarName;
-    private double value;
-    private String frontMotto;
-    private String backMotto;
-    private String frontLabel;
-    private String backLabel;
-    private String frontImage;
-    private String backImage;
-    private String valueDescription;
-    private boolean ridgedEdge;
-    private String metallurgy;
-    private int manufactureYear;
+    protected String familiarName;
+    protected double value;
+    protected String frontMotto;
+    protected String backMotto;
+    protected String frontLabel;
+    protected String backLabel;
+    protected String frontImage;
+    protected String backImage;
+    protected String valueDescription;
+    protected boolean ridgedEdge;
+    protected String metallurgy;
+    protected int manufactureYear;
     
     public Coin() {
 	this((Calendar.getInstance()).get(Calendar.YEAR));
     }
 	public Coin(int year){
-		manufactureYear = year;
-		frontMotto = "IN GOD WE TRUST";
-		backMotto = "E PLURIBUS UNUM";
-		frontLabel = "LIBERTY";
-		backLabel = "UNITED STATES OF AMERICA";
+		this.manufactureYear = year;
+		this.frontMotto = "IN GOD WE TRUST";
+		this.backMotto = "E PLURIBUS UNUM";
+		this.frontLabel = "LIBERTY";
+		this.backLabel = "UNITED STATES OF AMERICA";
 	}
 	
     public String getFamiliarName() {

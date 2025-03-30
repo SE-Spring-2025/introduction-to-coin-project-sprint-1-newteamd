@@ -1,12 +1,12 @@
 public class Dollar extends Coin {
     public Dollar(int year) {
         super(year);
-        familiarName = "Dollar";
-	    frontImage = "S_Anthony";
-	    backImage = "Moon_Eagle";
-	    valueDescription = "ONE DOLLAR";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-        value = 1.00;
+        this.familiarName = "Dollar";
+	    this.frontImage = "S_Anthony";
+	    this.backImage = "Moon_Eagle";
+	    this.valueDescription = "ONE DOLLAR";
+	    this.ridgedEdge = true;
+	    this.metallurgy = "Cupro-Nickel";
+        this.value = 1.00;
     }
 }

@@ -1,12 +1,12 @@
 public class Dime extends Coin {
     public Dime(int year) {
         super(year);
-        familiarName = "Dime";
-	    frontImage = "F_Roosevelt";
-	    backImage = "Torch_Branches";
-	    valueDescription = "ONE DIME";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-        value = 0.10;
+        this.familiarName = "Dime";
+	    this.frontImage = "F_Roosevelt";
+	    this.backImage = "Torch_Branches";
+	    this.valueDescription = "ONE DIME";
+	    this.ridgedEdge = true;
+	    this.metallurgy = "Cupro-Nickel";
+        this.value = 0.10;
     }
 }

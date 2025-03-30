@@ -1,12 +1,12 @@
 public class Quarter extends Coin {
     public Quarter(int year) {
         super(year);
-        familiarName = "Quarter";
-	    frontImage = "G_Washington";
-	    backImage = "Eagle";
-	    valueDescription = "QUARTER DOLLAR";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-        value = 0.25;
+        this.familiarName = "Quarter";
+	    this.frontImage = "G_Washington";
+	    this.backImage = "Eagle";
+	    this.valueDescription = "QUARTER DOLLAR";
+	    this.ridgedEdge = true;
+	    this.metallurgy = "Cupro-Nickel";
+        this.value = 0.25;
     }
 }

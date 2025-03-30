@@ -1,12 +1,12 @@
 public class HalfDollar extends Coin {
     public HalfDollar(int year) {
         super(year);
-        familiarName = "HalfDollar";
-	    frontImage = "J_Kennedy";
-	    backImage = "Presidential_Seal";
-	    valueDescription = "HALF DOLLAR";
-	    ridgedEdge = true;
-	    metallurgy = "Cupro-Nickel";
-        value = 0.50;
+        this.familiarName = "HalfDollar";
+	    this.frontImage = "J_Kennedy";
+	    this.backImage = "Presidential_Seal";
+	    this.valueDescription = "HALF DOLLAR";
+	    this.ridgedEdge = true;
+	    this.metallurgy = "Cupro-Nickel";
+        this.value = 0.50;
     }
 }

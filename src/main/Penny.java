@@ -1,12 +1,12 @@
 public class Penny extends Coin {
     public Penny(int year) {
         super(year);
-        familiarName = "Penny";
-	    frontImage = "A_Lincoln";
-	    backImage = "Lincoln_Memorial";
-	    valueDescription = "ONE CENT";
-	    ridgedEdge = false;
-	    metallurgy = "Copper";
-        value = 0.01;
+        this.familiarName = "Penny";
+	    this.frontImage = "A_Lincoln";
+	    this.backImage = "Lincoln_Memorial";
+	    this.valueDescription = "ONE CENT";
+        this.ridgedEdge = false;
+	    this.metallurgy = "Copper";
+        this.value = 0.01;
     }
 }
