@@ -21,18 +21,18 @@ public class Demo {
     private static void fixedDemo() {
 	System.out.println();
 	System.out.println();
-	System.out.println("Making a Coin(0.01)");
-	System.out.println("Result:" + new Penny(1));
-	System.out.println("Making a Coin(0.05)");
-	System.out.println("Result:" + new Dime(1));
-	System.out.println("Making a Coin(0.10)");
-	System.out.println("Result:" + new Nickel(1));
-	System.out.println("Making a Coin(0.25)");
-	System.out.println("Result:" + new Quarter(1));
-	System.out.println("Making a Coin(0.50)");
-	System.out.println("Result:" + new HalfDollar(1));
-	System.out.println("Making a Coin(1.00)");
-	System.out.println("Result:" + new Dollar(1));
+	System.out.println("Making a Penny");
+	System.out.println("Result:" + new Penny());
+	System.out.println("Making a Dime");
+	System.out.println("Result:" + new Dime());
+	System.out.println("Making a Nickel");
+	System.out.println("Result:" + new Nickel());
+	System.out.println("Making a Quarter");
+	System.out.println("Result:" + new Quarter());
+	System.out.println("Making a HalfDollar");
+	System.out.println("Result:" + new HalfDollar());
+	System.out.println("Making a Dollar");
+	System.out.println("Result:" + new Dollar());
     }
     private static void printMenu() {
 	System.out.println();
