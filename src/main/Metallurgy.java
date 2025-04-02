@@ -1,3 +1,3 @@
 public interface Metallurgy {
-    public void Smelt();
+    public String Smelt();
 }
