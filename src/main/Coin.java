@@ -16,7 +16,7 @@ public abstract class Coin {
     protected int manufactureYear;
     
     public Coin() {
-	this((Calendar.getInstance()).get(Calendar.YEAR));
+	    this((Calendar.getInstance()).get(Calendar.YEAR));
     }
 	public Coin(int year){
 		this.manufactureYear = year;
@@ -27,58 +27,58 @@ public abstract class Coin {
 	}
 	
     public String getFamiliarName() {
-	return familiarName;
+	    return familiarName;
     }
     public double getValue() {
-	return value;
+	    return value;
     }
     public String getFrontMotto() {
-	return frontMotto;
+	    return frontMotto;
     }
     public String getBackMotto() {
-	return backMotto;
+	    return backMotto;
     }
     public String getFrontLabel() {
-	return frontLabel;
+	    return frontLabel;
     }
     public String getBackLabel() {
-	return backLabel;
+	    return backLabel;
     }
     public String getFrontImage() {
-	return frontImage;
+	    return frontImage;
     }
     public String getBackImage() {
-	return backImage;
+	    return backImage;
     }
     public String getValueDescription() {
-	return valueDescription;
+	    return valueDescription;
     }
     public boolean getRidgedEdge() {
-	return ridgedEdge;
+	    return ridgedEdge;
     }
     public String getMetallurgy() {
-	return metallurgy;
+	    return metallurgy;
     }
     public int getYear() {
-	return manufactureYear;
+	    return manufactureYear;
     }
 
     public String toString() {
-	DecimalFormat df = new DecimalFormat("0.00");
+	    DecimalFormat df = new DecimalFormat("0.00");
         String formattedValue = df.format(value);
 	
-	return "[" + familiarName
-	    + "," + formattedValue
-	    + "," + manufactureYear
-	    + ",'" + frontMotto
-	    + "','" + backMotto
-	    + "','" + frontImage
-	    + "','" + backImage
-	    + "','" + frontLabel
-	    + "','" + backLabel
-	    + "','" + valueDescription
-	    + "'," + (ridgedEdge ? "ridges" : "smooth")
-	    + ",'" + metallurgy
-	    + "']";
+        return "[" + familiarName
+            + "," + formattedValue
+            + "," + manufactureYear
+            + ",'" + frontMotto
+            + "','" + backMotto
+            + "','" + frontImage
+            + "','" + backImage
+            + "','" + frontLabel
+            + "','" + backLabel
+            + "','" + valueDescription
+            + "'," + (ridgedEdge ? "ridges" : "smooth")
+            + ",'" + metallurgy
+            + "']";
     }
 }
