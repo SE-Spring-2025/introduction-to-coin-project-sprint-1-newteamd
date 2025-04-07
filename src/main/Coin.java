@@ -79,7 +79,7 @@ public abstract class Coin {
             + "','" + backLabel
             + "','" + valueDescription
             + "'," + (ridgedEdge ? "ridges" : "smooth")
-            + ",'" + metallurgy
+            + ",'" + metallurgyType.Smelt()
             + "']";
     }
 }
