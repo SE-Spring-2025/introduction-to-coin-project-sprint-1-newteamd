@@ -7,7 +7,7 @@ public class Nickel extends Coin {
         this.backImage = "Jefferson_Memorial";
         this.valueDescription = "FIVE CENTS";
         this.ridgedEdge = false;
-        this.metallurgy = "Cupro-Nickel";
+        this.metallurgyType = new CuproNickel();
         this.value = 0.05;
     }   
     public Nickel(int year) {
@@ -17,7 +17,7 @@ public class Nickel extends Coin {
 	    this.backImage = "Jefferson_Memorial";
 	    this.valueDescription = "FIVE CENTS";
 	    this.ridgedEdge = false;
-	    this.metallurgy = "Cupro-Nickel";
+	    this.metallurgyType = new CuproNickel();
         this.value = 0.05;
     }
 }

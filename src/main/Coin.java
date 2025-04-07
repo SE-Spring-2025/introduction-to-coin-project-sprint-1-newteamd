@@ -12,8 +12,9 @@ public abstract class Coin {
     protected String backImage;
     protected String valueDescription;
     protected boolean ridgedEdge;
-    protected String metallurgy;
+    //protected String metallurgy;
     protected int manufactureYear;
+    protected Metallurgy metallurgyType;
     
     public Coin() {
 	    this((Calendar.getInstance()).get(Calendar.YEAR));
@@ -57,7 +58,7 @@ public abstract class Coin {
 	    return ridgedEdge;
     }
     public String getMetallurgy() {
-	    return metallurgy;
+	    return metallurgyType.Smelt();
     }
     public int getYear() {
 	    return manufactureYear;

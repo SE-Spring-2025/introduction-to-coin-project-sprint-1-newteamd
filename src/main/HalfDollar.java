@@ -7,7 +7,7 @@ public class HalfDollar extends Coin {
         this.backImage = "Presidential_Seal";
         this.valueDescription = "HALF DOLLAR";
         this.ridgedEdge = true;
-        this.metallurgy = "Cupro-Nickel";
+        this.metallurgyType = new CuproNickel();
         this.value = 0.50;
     }
     public HalfDollar(int year) {
@@ -17,7 +17,7 @@ public class HalfDollar extends Coin {
 	    this.backImage = "Presidential_Seal";
 	    this.valueDescription = "HALF DOLLAR";
 	    this.ridgedEdge = true;
-	    this.metallurgy = "Cupro-Nickel";
+	    this.metallurgyType = new CuproNickel();
         this.value = 0.50;
     }
 }

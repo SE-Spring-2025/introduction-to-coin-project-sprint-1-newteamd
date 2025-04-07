@@ -7,7 +7,7 @@ public class Penny extends Coin {
         this.backImage = "Lincoln_Memorial";
         this.valueDescription = "ONE CENT";
         this.ridgedEdge = false;
-        this.metallurgy = "Copper";
+        this.metallurgyType = new Copper();
         this.value = 0.01;
     }
     public Penny(int year) {
@@ -17,7 +17,7 @@ public class Penny extends Coin {
 	    this.backImage = "Lincoln_Memorial";
 	    this.valueDescription = "ONE CENT";
         this.ridgedEdge = false;
-	    this.metallurgy = "Copper";
+	    this.metallurgyType = new Copper();
         this.value = 0.01;
     }
 }

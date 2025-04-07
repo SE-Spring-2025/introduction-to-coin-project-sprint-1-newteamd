@@ -7,7 +7,7 @@ public class Dime extends Coin {
         this.backImage = "Torch_Branches";
         this.valueDescription = "ONE DIME";
         this.ridgedEdge = true;
-        this.metallurgy = "Cupro-Nickel";
+        this.metallurgyType = new CuproNickel();
         this.value = 0.10;
     }   
     public Dime(int year) {
@@ -17,7 +17,7 @@ public class Dime extends Coin {
 	    this.backImage = "Torch_Branches";
 	    this.valueDescription = "ONE DIME";
 	    this.ridgedEdge = true;
-	    this.metallurgy = "Cupro-Nickel";
+	    this.metallurgyType = new CuproNickel();
         this.value = 0.10;
     }
 }

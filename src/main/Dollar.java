@@ -7,7 +7,7 @@ public class Dollar extends Coin {
         this.backImage = "Moon_Eagle";
         this.valueDescription = "ONE DOLLAR";
         this.ridgedEdge = true;
-        this.metallurgy = "Cupro-Nickel";
+        this.metallurgyType = new CuproNickel();
         this.value = 1.00;
     }
     public Dollar(int year) {
@@ -17,7 +17,7 @@ public class Dollar extends Coin {
 	    this.backImage = "Moon_Eagle";
 	    this.valueDescription = "ONE DOLLAR";
 	    this.ridgedEdge = true;
-	    this.metallurgy = "Cupro-Nickel";
+	    this.metallurgyType = new CuproNickel();
         this.value = 1.00;
     }
 }

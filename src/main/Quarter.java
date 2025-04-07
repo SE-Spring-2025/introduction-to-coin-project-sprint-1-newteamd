@@ -7,7 +7,7 @@ public class Quarter extends Coin {
         this.backImage = "Eagle";
         this.valueDescription = "QUARTER DOLLAR";
         this.ridgedEdge = true;
-        this.metallurgy = "Cupro-Nickel";
+        this.metallurgyType = new CuproNickel();
         this.value = 0.25;
     }
     public Quarter(int year) {
@@ -17,7 +17,7 @@ public class Quarter extends Coin {
 	    this.backImage = "Eagle";
 	    this.valueDescription = "QUARTER DOLLAR";
 	    this.ridgedEdge = true;
-	    this.metallurgy = "Cupro-Nickel";
+	    this.metallurgyType = new CuproNickel();
         this.value = 0.25;
     }
 }
