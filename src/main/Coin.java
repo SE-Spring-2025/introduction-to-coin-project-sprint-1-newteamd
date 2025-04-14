@@ -85,28 +85,41 @@ public abstract class Coin {
 
 
     public static class CoinCounts {
+        private int totalCoins;
+        private int pennies;
+        private int nickels;
+        private int dimes;
+        private int quarters;
+        private int halfDollars;
+        private int dollars;
         public void incrementPenny() {
-
+            pennies++;
+            totalCoins++;
         }
 
         public void incrementNickel() {
-
+            nickels++;
+            totalCoins++;
         }
 
         public void incrementDime() {
-
+            dimes++;
+            totalCoins++;
         }
 
         public void incrementQuarter() {
-
+            quarters++;
+            totalCoins++;
         }
 
         public void incrementHalfDollar() {
-
+            halfDollars++;
+            totalCoins++;
         }
 
         public void incrementDollar() {
-
+            dollars++;
+            totalCoins++;
         }
 
     }
