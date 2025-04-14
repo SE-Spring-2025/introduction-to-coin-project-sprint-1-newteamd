@@ -82,4 +82,32 @@ public abstract class Coin {
             + ",'" + metallurgyType.Smelt()
             + "']";
     }
+
+
+    public static class CoinCounts {
+        public void incrementPenny() {
+
+        }
+
+        public void incrementNickel() {
+
+        }
+
+        public void incrementDime() {
+
+        }
+
+        public void incrementQuarter() {
+
+        }
+
+        public void incrementHalfDollar() {
+
+        }
+
+        public void incrementDollar() {
+
+        }
+
+    }
 }
