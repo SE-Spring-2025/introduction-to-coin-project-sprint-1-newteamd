@@ -9,6 +9,7 @@ public class Dollar extends Coin {
         this.ridgedEdge = true;
         this.metallurgyType = new CuproNickel();
         this.value = 1.00;
+        coinCounts.incrementDollar();
     }
     public Dollar(int year) {
         super(year);
@@ -19,5 +20,6 @@ public class Dollar extends Coin {
 	    this.ridgedEdge = true;
 	    this.metallurgyType = new CuproNickel();
         this.value = 1.00;
+        coinCounts.incrementDollar();
     }
 }

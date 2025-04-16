@@ -9,6 +9,7 @@ public class Quarter extends Coin {
         this.ridgedEdge = true;
         this.metallurgyType = new CuproNickel();
         this.value = 0.25;
+        coinCounts.incrementQuarter();
     }
     public Quarter(int year) {
         super(year);
@@ -19,5 +20,6 @@ public class Quarter extends Coin {
 	    this.ridgedEdge = true;
 	    this.metallurgyType = new CuproNickel();
         this.value = 0.25;
+        coinCounts.incrementQuarter();
     }
 }

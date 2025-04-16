@@ -9,6 +9,7 @@ public class Dime extends Coin {
         this.ridgedEdge = true;
         this.metallurgyType = new CuproNickel();
         this.value = 0.10;
+        coinCounts.incrementDime();
     }   
     public Dime(int year) {
         super(year);
@@ -19,5 +20,6 @@ public class Dime extends Coin {
 	    this.ridgedEdge = true;
 	    this.metallurgyType = new CuproNickel();
         this.value = 0.10;
+        coinCounts.incrementDime();
     }
 }

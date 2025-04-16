@@ -1,11 +1,29 @@
 
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 public class Demo {
     private static Scanner keyboard = new Scanner(System.in);
     
-    public static void main(String[] args) {
-	System.out.println();
+    public static void main(String[] args) throws InterruptedException{
+		JFrame frame = new JFrame("Coin Counter");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300, 200);
+		System.out.println("Creating a quarter...");
+		Coin quarter = new Quarter();
+		System.out.println("Creating another quarter (added some delay to see response)");
+		Thread.sleep(2000);
+		Coin quarter2 = new Quarter();
+		System.out.println("Creating a penny to see total count go up but not quarter (with more delay)");
+		Thread.sleep(2000);
+		Coin penny = new Penny();
+		
+
+
+
+
+
+	/*System.out.println();
 	System.out.println();
 	System.out.println("Welcome to the CoinFlips Demo!");
 
@@ -100,6 +118,6 @@ public class Demo {
 		    System.out.println("Invalid entry, try again.");
 		    break;
 	    }
+		}*/
 	}
-    }
 }

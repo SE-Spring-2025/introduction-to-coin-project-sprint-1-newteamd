@@ -9,6 +9,7 @@ public class HalfDollar extends Coin {
         this.ridgedEdge = true;
         this.metallurgyType = new CuproNickel();
         this.value = 0.50;
+        coinCounts.incrementHalfDollar();
     }
     public HalfDollar(int year) {
         super(year);
@@ -19,5 +20,6 @@ public class HalfDollar extends Coin {
 	    this.ridgedEdge = true;
 	    this.metallurgyType = new CuproNickel();
         this.value = 0.50;
+        coinCounts.incrementHalfDollar();
     }
 }

@@ -1,5 +1,7 @@
 import java.util.Calendar;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Coin {
     protected String familiarName;
@@ -15,6 +17,8 @@ public abstract class Coin {
     //protected String metallurgy;
     protected int manufactureYear;
     protected Metallurgy metallurgyType;
+    protected static TotalCoins totalCoins;
+    protected static CoinCounts coinCounts = new CoinCounts();
     
     public Coin() {
 	    this((Calendar.getInstance()).get(Calendar.YEAR));
@@ -85,42 +89,79 @@ public abstract class Coin {
 
 
     public static class CoinCounts {
-        private int totalCoins;
-        private int pennies;
-        private int nickels;
-        private int dimes;
-        private int quarters;
-        private int halfDollars;
-        private int dollars;
-        public void incrementPenny() {
-            pennies++;
-            totalCoins++;
+        private int pennyCount = 0;
+        private int nickelCount = 0;
+        private int dimeCount = 0;
+        private int quarterCount = 0;
+        private int halfDollarCount = 0;
+        private int dollarCount = 0;
+        private int coinCount = 0;
+        //private ArrayList<Observer> quarterObservers = new ArrayList<>();
+        //private ArrayList<Observer> coinObservers = new ArrayList<>();
+        Observer totalCoinsObserver = new TotalCoins();
+        Observer totalQuarterObserver = new TotalQuarters();
+
+        public int getQuarterCount() {
+            return quarterCount;
+        }
+        public int getCoinCount() {
+            return coinCount;
         }
 
+        public void incrementPenny()
+        {
+            pennyCount++;
+            coinCount++;
+            totalCoinsObserver.update();
+            //notify(pennyObservers);
+        }
         public void incrementNickel() {
-            nickels++;
-            totalCoins++;
+            nickelCount++;
+            coinCount++;
+            totalCoinsObserver.update();
+            //notify(nickelObservers);
         }
-
         public void incrementDime() {
-            dimes++;
-            totalCoins++;
+            dimeCount++;
+            coinCount++;
+            totalCoinsObserver.update();
+            //notify(dimeObservers);
         }
-
-        public void incrementQuarter() {
-            quarters++;
-            totalCoins++;
-        }
-
         public void incrementHalfDollar() {
-            halfDollars++;
-            totalCoins++;
+            halfDollarCount++;
+            coinCount++;
+            totalCoinsObserver.update();
+            //notify(halfDollarObservers);
+        }
+        public void incrementDollar() {
+            dollarCount++;
+            coinCount++;
+            totalCoinsObserver.update();
+            //notify(dollarObservers);
+        }
+        public void incrementQuarter() {
+            quarterCount++;
+            coinCount++;
+            totalCoinsObserver.update();
+            totalQuarterObserver.update();
+            //notify(quarterObservers);
         }
 
-        public void incrementDollar() {
-            dollars++;
-            totalCoins++;
+        /*public void notify(ArrayList<Observer> observers) {
+            for (Observer observer : quarterObservers) {
+                observer.update();
+            }
+            for (Observer observer : coinObservers) {
+                observer.update();
+            }
+        }*/
+
+        /*public void addQuarterObserver(Observer observer) {
+            quarterObservers.add(observer);
         }
+        public void addCoinObserver(Observer observer) {
+            coinObservers.add(observer);
+        }*/
 
     }
 }

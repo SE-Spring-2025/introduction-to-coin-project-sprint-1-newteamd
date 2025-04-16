@@ -9,6 +9,7 @@ public class Penny extends Coin {
         this.ridgedEdge = false;
         this.metallurgyType = new Copper();
         this.value = 0.01;
+        coinCounts.incrementPenny();
     }
     public Penny(int year) {
         super(year);
@@ -19,5 +20,6 @@ public class Penny extends Coin {
         this.ridgedEdge = false;
 	    this.metallurgyType = new Copper();
         this.value = 0.01;
+        coinCounts.incrementPenny();
     }
 }

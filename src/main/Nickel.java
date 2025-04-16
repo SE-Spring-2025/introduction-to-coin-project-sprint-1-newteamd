@@ -9,6 +9,7 @@ public class Nickel extends Coin {
         this.ridgedEdge = false;
         this.metallurgyType = new CuproNickel();
         this.value = 0.05;
+        coinCounts.incrementNickel();
     }   
     public Nickel(int year) {
         super(year);
@@ -19,5 +20,6 @@ public class Nickel extends Coin {
 	    this.ridgedEdge = false;
 	    this.metallurgyType = new CuproNickel();
         this.value = 0.05;
+        coinCounts.incrementNickel();
     }
 }
