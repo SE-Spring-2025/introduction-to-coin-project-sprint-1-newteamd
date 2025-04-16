@@ -1,11 +1,16 @@
 import javax.swing.*;
 
 public class TotalQuarters implements Observer{
+    /**
+     * Has totalQuarter variable to keep track of the total number of quarters, as well as its own frame and JLabel to display the counts
+     */
     private static int totalQuarters = 0;
     private JFrame quartFrame = new JFrame("Total Quarters");
     private JLabel quarterLabel = new JLabel("Total Quarters: " + totalQuarters); 
 
-    
+    /**
+     * updates quarters, same add-ons as in TotalCoins
+     */
     public void update()
     {
         totalQuarters++;

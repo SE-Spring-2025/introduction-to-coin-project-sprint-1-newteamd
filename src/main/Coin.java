@@ -89,6 +89,7 @@ public abstract class Coin {
 
 
     public static class CoinCounts {
+        //all counts for each coin type
         private int pennyCount = 0;
         private int nickelCount = 0;
         private int dimeCount = 0;
@@ -96,11 +97,19 @@ public abstract class Coin {
         private int halfDollarCount = 0;
         private int dollarCount = 0;
         private int coinCount = 0;
+        /**
+         * I was going to make a list of observers for each coin type because we might have to do that later.
+         * decided to just go with basic default observers and we can worry about adding and removing 
+         * them later if we need to.
+         */
         //private ArrayList<Observer> quarterObservers = new ArrayList<>();
         //private ArrayList<Observer> coinObservers = new ArrayList<>();
         Observer totalCoinsObserver = new TotalCoins();
         Observer totalQuarterObserver = new TotalQuarters();
 
+        /*
+         * basic getters, not implemented in observer class yet
+         */
         public int getQuarterCount() {
             return quarterCount;
         }
@@ -108,6 +117,11 @@ public abstract class Coin {
             return coinCount;
         }
 
+        /**
+         * increments both specific type of coin and total coin count
+         * Calls update on necessary observers (Added potential for updating all observers later...
+         * not fully implemented yet)
+         */
         public void incrementPenny()
         {
             pennyCount++;
@@ -147,6 +161,9 @@ public abstract class Coin {
             //notify(quarterObservers);
         }
 
+        /**
+         * Methodds for notifying all observers of each type, should work but not needed yet
+         */
         /*public void notify(ArrayList<Observer> observers) {
             for (Observer observer : quarterObservers) {
                 observer.update();
