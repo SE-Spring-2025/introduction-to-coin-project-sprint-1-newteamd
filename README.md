@@ -12,9 +12,16 @@ Introduction and overview of the project:
 - each coin has its own list of attributes/traits
 
 Installation and setup guide:
- -java IDE
- -JDK 8
- -download coin.java and clone into repo
+ - need java 8 installed
+ - need GNU make installed
+ - download project folder
+
+Run the project:
+
+ Open folder in cmd and enter the following commands:
+ - make clean
+ - make compile
+ - make demo
 
 Usage instructions: 
 
