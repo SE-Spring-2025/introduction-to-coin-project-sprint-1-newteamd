@@ -77,7 +77,9 @@ public class Coin {
 	    ridgedEdge = true;
 	    metallurgy = "Cupro-Nickel";
 	}
-	else value = 0;
+	else { 
+		value = 0; 
+	}
 
 	this.value = value;
 	this.manufactureYear = year;
@@ -89,7 +91,7 @@ public class Coin {
 	
     }
     private boolean cmpDoubles(double a, double b) {
-	return Math.abs(a-b) < 0.00001;
+	return Math.abs(a - b) < 0.00001;
     }
 	
     public String getFamiliarName() {
