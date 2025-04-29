@@ -20,17 +20,52 @@ public abstract class Coin {
     protected static TotalCoins totalCoins;
     protected static CoinCounts coinCounts = new CoinCounts();
     
-    public Coin() {
-	    this((Calendar.getInstance()).get(Calendar.YEAR));
+	protected Coin(){}
+    public void manufacture(){
+        manufacture((Calendar.getInstance()).get(Calendar.YEAR));
     }
-	public Coin(int year){
-		this.manufactureYear = year;
+    public void manufacture(int year){
+        smelt();
+        addRidges();
+        imprintImage();
+        imprintText();
+        this.manufactureYear = year;
+        flip();
+        imprintBackImage();
+        imprintBackText();
+        buff();
+        increment();
+    }
+    protected void smelt(){
+        System.out.println("smelting " + metallurgyType.Smelt());
+    }
+    protected void addRidges(){
+        System.out.println("adding ridges");
+    }
+    protected void imprintImage(){
+        System.out.println("imprinting front image");
+    }
+    protected void imprintText(){
+        System.out.println("imprinting front text");
 		this.frontMotto = "IN GOD WE TRUST";
-		this.backMotto = "E PLURIBUS UNUM";
 		this.frontLabel = "LIBERTY";
+    }
+    protected void flip(){
+        System.out.println("flipping");
+    }
+    protected void  imprintBackImage(){
+        System.out.println("imprinting back image");
+    }
+    protected void imprintBackText(){
+        System.out.println("imprinting back text");
+		this.backMotto = "E PLURIBUS UNUM";
 		this.backLabel = "UNITED STATES OF AMERICA";
-	}
-	
+    }
+    protected void buff(){
+        System.out.println("buffing edges");
+    }
+    protected void increment(){}
+
     public String getFamiliarName() {
 	    return familiarName;
     }

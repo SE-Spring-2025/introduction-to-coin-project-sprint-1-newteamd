@@ -1,25 +1,27 @@
 public class Dollar extends Coin {
-    public Dollar() 
-    {
-        super();
+    public Dollar() {
         this.familiarName = "Dollar";
-        this.frontImage = "S_Anthony";
-        this.backImage = "Moon_Eagle";
-        this.valueDescription = "ONE DOLLAR";
-        this.ridgedEdge = true;
-        this.metallurgyType = new CuproNickel();
-        this.value = 1.00;
-        coinCounts.incrementDollar();
-    }
-    public Dollar(int year) {
-        super(year);
-        this.familiarName = "Dollar";
-	    this.frontImage = "S_Anthony";
-	    this.backImage = "Moon_Eagle";
-	    this.valueDescription = "ONE DOLLAR";
-	    this.ridgedEdge = true;
 	    this.metallurgyType = new CuproNickel();
         this.value = 1.00;
+    }
+    protected void addRidges(){
+        super.addRidges();
+        this.ridgedEdge = false;
+    }
+    protected void imprintImage(){
+        super.imprintImage();
+        this.frontImage = "S_Anthony";
+    }
+    protected void  imprintBackImage(){
+        super.imprintBackImage();
+        this.backImage = "Moon_Eagle";
+    }
+    protected void imprintBackText(){
+        super.imprintBackText();
+        this.valueDescription = "ONE DOLLAR";
+    }
+    protected void increment(){
+        super.increment();
         coinCounts.incrementDollar();
     }
 }
