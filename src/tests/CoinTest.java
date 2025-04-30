@@ -72,6 +72,7 @@ public class CoinTest {
 		try
 		{
 			Coin c = new Penny();
+			c.manufacture();
 		}
 		catch(Exception e)
 		{
@@ -80,7 +81,8 @@ public class CoinTest {
 
 		try
 		{
-			Coin c = new Penny(2025);
+			Coin c = new Penny();
+			c.manufacture(2025);
 		}
 		catch(Exception e)
 		{
@@ -90,6 +92,7 @@ public class CoinTest {
 		try
 		{
 			Coin c = new Nickel();
+			c.manufacture();
 		}
 		catch(Exception e)
 		{
@@ -98,7 +101,8 @@ public class CoinTest {
 
 		try
 		{
-			Coin c = new Nickel(2025);
+			Coin c = new Nickel();
+			c.manufacture(2025);
 		}
 		catch(Exception e)
 		{
@@ -108,6 +112,7 @@ public class CoinTest {
 		try
 		{
 			Coin c = new Dime();
+			c.manufacture();
 		}
 		catch(Exception e)
 		{
@@ -116,7 +121,8 @@ public class CoinTest {
 
 		try
 		{
-			Coin c = new Dime(2025);
+			Coin c = new Dime();
+			c.manufacture(2025);
 		}
 		catch(Exception e)
 		{
@@ -126,6 +132,7 @@ public class CoinTest {
 		try
 		{
 			Coin c = new Quarter();
+			c.manufacture();
 		}
 		catch(Exception e)
 		{
@@ -134,7 +141,18 @@ public class CoinTest {
 
 		try
 		{
+			Coin c = new Quarter();
+			c.manufacture(2025);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Quarter(year) constructor caused exception: "+e.getMessage());
+		}
+
+		try
+		{
 			Coin c = new HalfDollar();
+			c.manufacture();
 		}
 		catch(Exception e)
 		{
@@ -143,7 +161,8 @@ public class CoinTest {
 
 		try
 		{
-			Coin c = new HalfDollar(2025);
+			Coin c = new HalfDollar();
+			c.manufacture(2025);
 		}
 		catch(Exception e)
 		{
@@ -153,6 +172,7 @@ public class CoinTest {
 		try
 		{
 			Coin c = new Dollar();
+			c.manufacture();
 		}
 		catch(Exception e)
 		{
@@ -161,7 +181,8 @@ public class CoinTest {
 
 		try
 		{
-			Coin c = new Dollar(2025);
+			Coin c = new Dollar();
+			c.manufacture(2025);
 		}
 		catch(Exception e)
 		{
@@ -207,7 +228,8 @@ public class CoinTest {
     }*/
 
 	public void testToString() {
-		Coin c = new HalfDollar(1999);
+		Coin c = new HalfDollar();
+		c.manufacture(1999);
 		String expectedOutput =
 			"[HalfDollar,0.50,1999,'IN GOD WE TRUST','E PLURIBUS UNUM'"
 			+ ",'J_Kennedy','Presidential_Seal','LIBERTY'"
@@ -232,6 +254,7 @@ public class CoinTest {
     }
     private boolean testPenny() {
 	Coin c = new Penny();
+	c.manufacture();
 	
 	if (! "Penny".equals(c.getFamiliarName())) return false;
 	if (! cmpDoubles(c.getValue(), PENNY_VALUE)) return false;
@@ -251,6 +274,7 @@ public class CoinTest {
     }
     private boolean testNickel() {
 	Coin c = new Nickel();
+	c.manufacture();
 	
 	if (! "Nickel".equals(c.getFamiliarName())) return false;
 	if (! cmpDoubles(c.getValue(), NICKEL_VALUE)) return false;
@@ -270,6 +294,7 @@ public class CoinTest {
     }
     private boolean testDime() {
 	Coin c = new Dime();
+	c.manufacture();
 	
 	if (! "Dime".equals(c.getFamiliarName())) return false;
 	if (! cmpDoubles(c.getValue(), DIME_VALUE)) return false;
@@ -289,6 +314,7 @@ public class CoinTest {
     }
     private boolean testQuarter() {
 	Coin c = new Quarter();
+	c.manufacture();
 	
 	if (! "Quarter".equals(c.getFamiliarName())) return false;
 	if (! cmpDoubles(c.getValue(), QUARTER_VALUE)) return false;
@@ -308,6 +334,7 @@ public class CoinTest {
     }
     private boolean testHalfDollar() {
 	Coin c = new HalfDollar();
+	c.manufacture();
 	
 	if (! "HalfDollar".equals(c.getFamiliarName())) return false;
 	if (! cmpDoubles(c.getValue(), HALFDOLLAR_VALUE)) return false;
@@ -327,6 +354,7 @@ public class CoinTest {
     }
     private boolean testDollar() {
 	Coin c = new Dollar();
+	c.manufacture();
 	
 	if (! "Dollar".equals(c.getFamiliarName())) return false;
 	if (! cmpDoubles(c.getValue(), DOLLAR_VALUE)) return false;
